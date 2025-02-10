@@ -156,7 +156,7 @@
 
         // Listen for Calendly events
         window.addEventListener('message', function(e) {
-            if (e.origin === 'https://calendly.com') {
+            if (e.origin === 'https://calendly.com' && e.data.event && e.data.event.indexOf('calendly') === 0) {
                 sendToZapier(e.data);
             }
         });
