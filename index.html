@@ -28,7 +28,7 @@
             position: absolute;
             top: 10px;
             left: 20px;
-            height: 50px;
+           ;
         }
         .container {
             max-width: 1200px;
@@ -50,14 +50,16 @@
             background: #000;
             margin: 20px 0;
         }
-        .video-container iframe,
-        .video-container object,
-        .video-container embed {
+        .video-container video {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
+        }
+        .qr-code-container {
+            text-align: center;
+            margin: 20px 0;
         }
         .content {
             background-color: white;
@@ -82,21 +84,27 @@
 <body>
     <div class="header">
         <img src="ygrenelogo.png" alt="Logo">
-        <h1>Welcome to the PACE Financing Program with Ygrene!</h1>
+        <h1>Welcome to Our Landing Page</h1>
     </div>
     <div class="container">
         <p>Please watch the following video for an initial introduction before the Webinar Session.</p>
         <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/your-video-id" frameborder="0" allowfullscreen></iframe>
+            <video controls>
+                <source src="intro-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="qr-code-container">
+            <p>If you are on the go please scan the QR code</p>
+            <img src="videoQR.png" alt="QR Code">
         </div>
         <div class="content">
-            <h2>Thanks for Watching!</h2>
-            <p>We look forward to seeing you in the online session.</p>
-            <p>For further inquiries, contact us at:</p>
-            </p><a href="mailto:support@ygrene.vip">support@ygrene.vip</a> </p>
-            <p> or </p> 
-            <p><a href="mailto:carlos.alvarez@ygrene.com">carlos.alvarez@ygrene.com</a></p>
+            <h2>About Us</h2>
+            <p>Thanks for watching, we look forward to seeing you in the online session.</p>
+            <p>For further inquiries, contact us at: <a href="mailto:support@ygrene.vip">support@ygrene.vip</a> or <a href="mailto:carlos.alvarez@ygrene.com">carlos.alvarez@ygrene.com</a></p>
+            <a href="#" class="button">Learn More</a>
         </div>
     </div>
 </body>
+</html>
 </html>
