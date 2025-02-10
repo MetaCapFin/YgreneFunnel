@@ -139,28 +139,6 @@
         }
     </style>
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
-    <script>
-        // Function to send data to Zapier webhook
-        function sendToZapier(event) {
-            fetch('https://hooks.zapier.com/hooks/catch/20787888/2aeif15/', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(event)
-            })
-            .then(response => response.json())
-            .then(data => console.log('Success:', data))
-            .catch((error) => console.error('Error:', error));
-        }
-
-        // Listen for Calendly events
-        window.addEventListener('message', function(e) {
-            if (e.origin === 'https://calendly.com' && e.data.event && e.data.event.indexOf('calendly') === 0) {
-                sendToZapier(e.data);
-            }
-        });
-    </script>
 </head>
 <body>
     <div class="header">
